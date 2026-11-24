@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Certificates & Achievements – Shindo Bajada Amacan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={darkMode:'media',theme:{extend:{fontFamily:{display:['Syne','system-ui','sans-serif'],sans:['"DM Sans"','system-ui','sans-serif']},colors:{bg:'var(--bg)',ink:'var(--ink)',muted:'var(--muted)',line:'var(--line)',accent:'var(--accent)',pink:'var(--pink)',glow:'var(--glow)',surface:'var(--surface)',onaccent:'var(--on)'}}}}
+</script>
+<style>
+:root{color-scheme:dark;--bg:#0e0e10;--surface:#1a1815cc;--ink:#f2ede4;--muted:#a59f93;--line:#312d27;--accent:#dcb572;--pink:#e5906e;--glow:#4a3720;--on:#15110b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:#0e0e10;--surface:#1a1815cc;--ink:#f2ede4;--muted:#a59f93;--line:#312d27;--accent:#dcb572;--pink:#e5906e;--glow:#4a3720;--on:#15110b}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);overflow-x:hidden}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+dialog{background:transparent;border:0;padding:0;max-width:100vw;max-height:100vh}
+dialog::backdrop{background:rgba(0,0,0,.85)}
+
+/* ===== HOVER EFFECTS ===== */
+body .cert{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+body .cert .open img{transition:transform .5s ease}
+body .cert h3{transition:color .25s ease}
+body .cert .open::after{content:"View full size";position:absolute;left:0;right:0;bottom:0;padding:10px 12px;text-align:center;font-size:13px;font-weight:700;color:var(--on);background:var(--accent);transform:translateY(100%);transition:transform .25s ease}
+body #lb button,body header a{transition:background-color .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease}
+header a[href="index.html"]:last-child{background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 2px no-repeat;padding-bottom:2px;transition:background-size .3s ease,color .25s ease}
+
+@media (hover:hover){
+  /* certificate cards lift with a glow, image zooms, label slides up */
+  body .cert:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 40px -12px var(--glow)}
+  body .cert:hover .open img{transform:scale(1.07)}
+  body .cert:hover h3{color:var(--accent)}
+  body .cert:hover .open::after{transform:translateY(0)}
+
+  /* header links */
+  header a[href="index.html"]:first-child:hover{color:var(--accent)}
+  header a[href="index.html"]:last-child:hover{background-size:100% 2px;text-decoration:none}
+
+  /* close button in the preview */
+  body #lb button:hover{background:var(--pink);transform:translateY(-2px);box-shadow:0 8px 20px -6px var(--pink)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important}
+  body .cert:hover,body .cert:hover .open img,body #lb button:hover{transform:none !important}
+}
+</style>
+</head>
+<body class="font-sans text-[17px] leading-relaxed text-ink">
+
+<header class="sticky top-0 z-10 bg-surface backdrop-blur-lg border-b border-line">
+<div class="max-w-5xl mx-auto px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
+<a href="index.html" class="font-display font-extrabold text-xl text-ink no-underline">Shindo Amacan</a>
+<a href="index.html" class="text-accent font-medium no-underline">Back to portfolio</a>
+</div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pt-12 pb-10">
+<h1 class="font-display font-extrabold text-[clamp(36px,6vw,64px)] leading-none tracking-tighter">Certificates and achievements</h1>
+<p class="text-muted max-w-xl mt-4 mb-10">Tap any certificate to see it full size.</p>
+
+<!-- ============ CISCO CERTIFICATE ============ -->
+<h2 class="font-display font-extrabold text-3xl tracking-tight mb-5">Cisco Certificate</h2>
+
+<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+<figure class="cert bg-surface border border-line rounded-3xl overflow-hidden m-0">
+<button type="button" class="open relative overflow-hidden block w-full aspect-[4/3] bg-glow grid place-items-center cursor-zoom-in p-0 border-0" aria-label="View Certificate 1 full size">
+<img src="cert1.png" alt="Certificate 1" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+</button>
+<figcaption class="p-5"><h3 class="font-display font-bold text-lg">English for IT1</h3></figcaption>
+</figure>
+
+<figure class="cert bg-surface border border-line rounded-3xl overflow-hidden m-0">
+<button type="button" class="open relative overflow-hidden block w-full aspect-[4/3] bg-glow grid place-items-center cursor-zoom-in p-0 border-0" aria-label="View Certificate 2 full size">
+<img src="cert3.png" alt="Certificate 2" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+</button>
+<figcaption class="p-5"><h3 class="font-display font-bold text-lg">Creating and Compelling Reports</h3></figcaption>
+</figure>
+
+<figure class="cert bg-surface border border-line rounded-3xl overflow-hidden m-0">
+<button type="button" class="open relative overflow-hidden block w-full aspect-[4/3] bg-glow grid place-items-center cursor-zoom-in p-0 border-0" aria-label="View Achievement 1 full size">
+<img src="cert.png" alt="Achievement 1" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+</button>
+<figcaption class="p-5"><h3 class="font-display font-bold text-lg">English for IT 2</h3></figcaption>
+</figure>
+
+</div>
+
+<!-- ============ OTHER CERTIFICATES (PICTURES ONLY) ============
+HOW TO USE:
+1. Save each picture next to this file and name it cert4.png, cert5.png, cert6.png, and so on.
+2. The slots below already point to cert4.png up to cert9.png. Just add the pictures and they appear.
+3. Need more? Copy one whole <figure>...</figure> block and paste it after the last one,
+   then change the number (cert10.png, cert11.png, ...) in src, alt and aria-label.
+-->
+<h2 class="font-display font-extrabold text-3xl tracking-tight mt-14 mb-5">Other certificates/awards</h2>
+
+<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+<figure class="cert bg-surface border border-line rounded-3xl overflow-hidden m-0">
+<button type="button" class="open relative overflow-hidden block w-full aspect-[4/3] bg-glow grid place-items-center cursor-zoom-in p-0 border-0" aria-label="View Certificate 4 full size">
+<img src="cert4.png" alt="Certificate 4" class="absolute inset-0 w-full h-full object-contain" onload="this.nextElementSibling.remove()" onerror="this.remove()">
+<span class="text-muted text-sm px-4 text-center col-start-1 row-start-1">Add cert4.png</span>
+</button>
+</figure>
+
+
+</div>
+</main>
+
+<dialog id="lb" aria-label="Certificate preview">
+<form method="dialog" class="text-right mb-2"><button class="px-4 py-2 rounded-full bg-accent text-onaccent font-bold text-sm cursor-pointer">Close</button></form>
+<img id="lbimg" src="" alt="" class="max-w-[92vw] max-h-[80vh] rounded-2xl">
+</dialog>
+
+<script>
+var lb=document.getElementById('lb'),li=document.getElementById('lbimg');
+document.querySelectorAll('.open').forEach(function(b){
+b.addEventListener('click',function(){
+var img=b.querySelector('img');
+if(!img)return;
+li.src=img.src;li.alt=img.alt;lb.showModal();
+});
+});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>
